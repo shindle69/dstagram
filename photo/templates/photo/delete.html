@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}- Delete{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 panel panel-default">
+            <div>
+                {{object}}을(/를) 지워도 되나요?
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" class="b tn btn-primary" value="Confirm">
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+{% endblock %}
